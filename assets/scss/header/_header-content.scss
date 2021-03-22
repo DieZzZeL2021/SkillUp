@@ -8,15 +8,36 @@
     @include lg-md {
       margin: 0 0 43px 0;
     }
+
+    @include md {
+      margin: 0 0 33px 0;
+    }
   }
 
   &__actions {
     display: flex;
     justify-content: center;
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      @include sm {
+        letter-spacing: 0.05em;
+      }
+    }
   }
 
   .btn:first-of-type {
-    margin-right: $gap;
+    @include sm-min {
+      margin-right: $gap;
+    }
+
+    @include sm {
+      margin-bottom: $gap;
+    }
   }
 
   &__conteiner {

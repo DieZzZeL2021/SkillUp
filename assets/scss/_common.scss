@@ -45,20 +45,21 @@ a {
   border: 2px solid $color-light;
 
   @include lg-min {
-    font-size: 1.125rem;
     min-width: 250px;
     height: 60px;
     padding: 18px $gap;
+    font-size: 1.125rem;
   }
   @include lg-md {
     height: 50px;
     min-width: 200px;
     padding: 14px $gap;
   }
-  @include lg-md {
+
+  @include md {
     height: 40px;
-    min-width: 200px;
-    padding: 9px $gap;
+    min-width: 170px;
+    padding: $gap / 2 $gap;
   }
 }
 .btn--lidht:hover {
@@ -67,11 +68,11 @@ a {
 }
 
 .btn--primary {
+  height: 60px;
+  font-size: 1.125rem;
   background-color: rgba($color-primary, 0.8);
   border: 2px solid $color-primary;
-  height: 60px;
   padding: 18px $gap;
-  font-size: 1.125rem;
 
   @include sm-min {
     min-width: 350px;

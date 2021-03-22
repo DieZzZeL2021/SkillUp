@@ -514,11 +514,11 @@ a {
 }
 
 .btn--primary {
+  height: 60px;
+  font-size: 1.125rem;
   background-color: rgba(45, 54, 81, 0.8);
   border: 2px solid #2d3651;
-  height: 60px;
   padding: 18px 20px;
-  font-size: 1.125rem;
 }
 
 .btn--primary:hover {
@@ -631,10 +631,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.header-content .btn:first-of-type {
-  margin-right: 20px;
 }
 
 .skill__conteiner {
@@ -776,9 +772,18 @@ a {
   .btn--primary {
     min-width: 350px;
   }
+  .header-content .btn:first-of-type {
+    margin-right: 20px;
+  }
   .skill {
     padding: 10px;
     margin-bottom: 30px;
+  }
+}
+
+@media (min-height: 691px) {
+  .skill__conteiner {
+    grid-auto-rows: calc(33.33vh - 13.333333px);
   }
 }
 
@@ -793,10 +798,10 @@ a {
     font-size: 3.75rem;
   }
   .btn--lidht {
-    font-size: 1.125rem;
     min-width: 250px;
     height: 60px;
     padding: 18px 20px;
+    font-size: 1.125rem;
   }
   .header-content__title {
     margin: 0 0 53px 0;
@@ -816,11 +821,6 @@ a {
     min-width: 200px;
     padding: 14px 20px;
   }
-  .btn--lidht {
-    height: 40px;
-    min-width: 200px;
-    padding: 9px 20px;
-  }
   .header-content__title {
     margin: 0 0 43px 0;
   }
@@ -833,6 +833,14 @@ a {
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
+  }
+  .btn--lidht {
+    height: 40px;
+    min-width: 170px;
+    padding: 10px 20px;
+  }
+  .header-content__title {
+    margin: 0 0 33px 0;
   }
   .skill-item__title {
     font-size: 1.125rem;
@@ -847,7 +855,7 @@ a {
 }
 
 @media (max-height: 690px) {
-  .skill-item {
+  .skill__conteiner {
     grid-auto-rows: calc(230px - 13.333333px);
   }
 }
@@ -855,6 +863,21 @@ a {
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;
+  }
+  .header-content__actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-content__actions .btn {
+    letter-spacing: 0.05em;
+  }
+  .header-content .btn:first-of-type {
+    margin-bottom: 20px;
   }
   .skill {
     padding: 20px;
