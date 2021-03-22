@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: $font-main;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-family: $font-header;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.08em;
+  line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+
+  @include md {
+    font-size: 1.875rem;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  letter-spacing: 0.1em;
+  transition: background-color 0.5s;
+}
+
+.btn--lidht {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid $color-light;
+
+  @include lg-min {
+    font-size: 1.125rem;
+    min-width: 250px;
+    height: 60px;
+    padding: 18px $gap;
+  }
+  @include lg-md {
+    height: 50px;
+    min-width: 200px;
+    padding: 14px $gap;
+  }
+  @include lg-md {
+    height: 40px;
+    min-width: 200px;
+    padding: 9px $gap;
+  }
+}
+.btn--lidht:hover {
+  background-color: $color-accent;
+  border: 2px solid $color-light;
+}
+
+.btn--primary {
+  background-color: rgba($color-primary, 0.8);
+  border: 2px solid $color-primary;
+  height: 60px;
+  padding: 18px $gap;
+  font-size: 1.125rem;
+
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+.btn--primary:hover {
+  background-color: $color-accent;
+  border: 2px solid $color-primary;
+}

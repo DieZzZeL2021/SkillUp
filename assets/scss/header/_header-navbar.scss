@@ -1,0 +1,30 @@
+.header-navbar {
+  &__btn {
+    display: none;
+  }
+
+  &__list {
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+
+    @include unlist(0 (-$gap) 0 0);
+  }
+  &__item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: block;
+    padding: $gap ($gap / 2);
+    font-size: 1.125rem;
+    letter-spacing: 0.09em;
+    transition: color 0.5s;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}

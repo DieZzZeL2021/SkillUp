@@ -1,0 +1,25 @@
+.header-content {
+  position: relative;
+  &__title {
+    @include lg-min {
+      margin: 0 0 53px 0;
+    }
+
+    @include lg-md {
+      margin: 0 0 43px 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn:first-of-type {
+    margin-right: $gap;
+  }
+
+  &__conteiner {
+    @extend %conteiner;
+  }
+}
