@@ -1,13 +1,20 @@
 .header-navbar {
+  @include md {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &__btn {
     width: 30px;
     height: 22.5px;
     position: relative;
-    margin: 25px auto;
+    margin: $gap 0;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
     cursor: pointer;
-    // display: none;
+    @include md-min {
+      display: none;
+    }
 
     &-row {
       display: block;
@@ -51,11 +58,15 @@
   }
 
   &__list {
-    display: grid;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-
     @include unlist(0 (-$gap) 0 0);
+    @include md-min {
+      display: grid;
+      justify-content: end;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    @include md {
+      display: none;
+    }
   }
   &__item {
     margin-left: 10px;
