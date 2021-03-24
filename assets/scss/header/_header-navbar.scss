@@ -66,6 +66,12 @@
     }
     @include md {
       display: none;
+      position: absolute;
+      top: 100%;
+      right: $gap * 2;
+      text-align: right;
+      background-color: rgba($color-gray-dark, 0.7);
+      @include box-shadow;
     }
   }
   &__item {
