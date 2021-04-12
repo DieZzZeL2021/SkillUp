@@ -1,5 +1,5 @@
 @mixin box-shadow {
-  box-shadow: -3px 3 20px -10px darken($color-gray-light, 40%);
+  box-shadow: -3px 3 $gap -10px darken($color-gray-light, 40%);
 }
 
 @mixin unlist($m: 0, $p: 0) {

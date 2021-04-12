@@ -1,25 +1,44 @@
 .about {
   letter-spacing: 0.055em;
-  background-color: #e5e5e5;
+  background-color: $color-gray-light;
 
   @include lg-min {
-    padding-top: 69px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 82px;
   }
   @include lg-md {
-    padding-top: 49px;
-    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 62px;
+  }
+
+  @include md {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 271px;
-    gap: 100px;
-    align-items: center;
     max-width: 1340px;
     margin: auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: $gap;
+    padding-left: $gap;
+
+    @include md-min {
+      grid-template-columns: 1fr 271px;
+      gap: 100px;
+    }
+    @include lg-md {
+      grid-template-columns: 1fr 271px;
+      gap: 40px;
+    }
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+    @include sm {
+      gap: $gap;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__content p:first-of-type {
@@ -35,13 +54,38 @@
     top: 0;
     width: 2px;
     height: 200px;
+
+    @include lg-md {
+      right: (-$gap);
+    }
+
+    @include md-sm {
+      right: -10px;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__content p {
+    @include lg-min {
+      font-size: 1.125rem;
+    }
   }
 
   &__image {
     display: grid;
     align-content: center;
     justify-items: center;
-    max-width: 100%;
-    max-height: 480px;
+
+    img {
+      max-width: 100%;
+      max-height: 480px;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
   }
 }

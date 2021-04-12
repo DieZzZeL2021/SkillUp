@@ -4,12 +4,16 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: $gap;
     max-width: 1340px;
     margin: auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: $gap;
+    padding-left: $gap;
+
+    @include md-min {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
@@ -28,24 +32,38 @@
     height: 60px;
     padding-right: 30px;
     padding-left: 30px;
-    transition: background-color 0.5s, border-color 0.5s;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
     letter-spacing: 0.15em;
-    color: #ffffff;
+    color: $color-light;
     border: 2px solid rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
 
-    &:hover {
+    // @include md-sm {
+    //   min-width: 352px;
+    // }
+
+    &:hover,
+    &:focus {
       border-color: rgba(255, 255, 255, 0.15);
-      border-bottom-color: #ffffff;
+      border-bottom-color: $color-light;
       background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &::placeholder {
+      color: #ffffff;
+      opacity: 0.2;
+    }
+    &:hover::placeholder {
+      color: #ffffff;
+      opacity: 0.5;
     }
   }
 
   .btn--primary {
     width: 100%;
-    color: #ffffff;
+    color: $color-light;
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
@@ -53,8 +71,8 @@
     &:hover,
     &:focus {
       cursor: pointer;
-      border-color: #ffffff;
-      background-color: #d66926;
+      border-color: $color-light;
+      background-color: $color-accent;
     }
   }
 }
