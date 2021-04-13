@@ -42,7 +42,9 @@
   }
 
   &__action {
-    display: flex;
-    justify-content: center;
+    @include sm-min {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
