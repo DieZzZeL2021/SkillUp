@@ -1,0 +1,9 @@
+.footer {
+  padding: 50px 20px 70px;
+  text-align: center;
+  background-color: #2d3651;
+
+  &__container {
+    @extend %container;
+  }
+}

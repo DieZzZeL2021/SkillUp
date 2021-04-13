@@ -30,7 +30,6 @@ h1 {
 }
 
 h2 {
-  display: block;
   letter-spacing: 0.1em;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
@@ -70,7 +69,7 @@ a {
 }
 
 p {
-  color: #637588;
+  color: $color-gray;
 }
 
 .btn {

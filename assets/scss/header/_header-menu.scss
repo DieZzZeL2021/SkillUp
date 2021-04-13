@@ -10,11 +10,11 @@
     @include box-shadow;
   }
 
-  &__conteiner {
+  &__container {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
 
-    @extend %conteiner;
+    @extend %container;
   }
 }
