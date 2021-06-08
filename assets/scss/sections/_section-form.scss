@@ -5,13 +5,9 @@
   &__container {
     display: grid;
     gap: $gap;
-    max-width: 1340px;
-    margin: auto;
-    padding-right: $gap;
-    padding-left: $gap;
+    @extend %container;
 
     @include md-min {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -39,10 +35,7 @@
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
-
-    // @include md-sm {
-    //   min-width: 352px;
-    // }
+    outline: none;
 
     &:hover,
     &:focus {

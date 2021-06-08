@@ -14,7 +14,6 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-
     @extend %container;
   }
 }

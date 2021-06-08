@@ -114,9 +114,6 @@ p {
   border: 2px solid $color-primary;
   padding: 18px $gap;
 
-  @include sm-min {
-    min-width: 350px;
-  }
   @include sm {
     width: 100%;
   }
